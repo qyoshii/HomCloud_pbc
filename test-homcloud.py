@@ -22,8 +22,7 @@ hc.PDList.from_alpha_filtration(pointcloud,
 
 pdlist = hc.PDList("pointcloud-periodic-test.pdgm")
 
-pd2 = pdlist.dth_diagram(2)
-#pd2.histogram((0, 1.4)).plot(colorbar={"type": "log"})
-plt.hist(pd2.deaths - pd2.births, bins=100); 
+pd1 = pdlist.dth_diagram(1)
+pd1.histogram((0, 1.4)).plot(colorbar={"type": "log"})
 
 plt.savefig("pointcloud-periodic-test.png")
